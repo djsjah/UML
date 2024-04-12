@@ -1,0 +1,331 @@
+<template class="datalist-template">
+  <li class="header-block__item">
+    <button type="button" class="header-block__button button-reset">
+      Value
+    </button>
+  </li>
+</template>
+
+<template class="user-template">
+  <button class="user__button user__button_out button-reset">
+    Выйти
+  </button>
+</template>
+
+<template class="preloader-template preloader-template_table">
+  <tr class="client-table__row client-table__row_preloader">
+    <td class="client-table__col client-table__col_preloader flex">
+      <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M2 20C2 29.941 10.059 38 20 38C29.941 38 38 29.941 38 20C38 10.059 29.941 2 20 2C17.6755 2 15.454 2.4405 13.414 3.243"
+          stroke="#9873FF" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+      </svg>
+    </td>
+  </tr>
+</template>
+
+<template class="preloader-template preloader-template_save">
+  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_224_6260)">
+      <path
+        d="M3.00008 8.03996C3.00008 10.8234 5.2566 13.08 8.04008 13.08C10.8236 13.08 13.0801 10.8234 13.0801 8.03996C13.0801 5.25648 10.8236 2.99996 8.04008 2.99996C7.38922 2.99996 6.7672 3.1233 6.196 3.348"
+        stroke="#B89EFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+    </g>
+    <defs>
+      <clippath>
+        <rect width="16" height="16" fill="white" />
+      </clippath>
+    </defs>
+  </svg>
+</template>
+
+<template class="table-template table-template_error">
+  <tr class="client-table__row client-table__row_error">
+    <td class="client-table__col client-table__col_error flex">
+      <svg width="40px" height="40px" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M57.16 8.42l-52 104c-1.94 4.02-.26 8.85 3.75 10.79c1.08.52 2.25.8 3.45.81h104c4.46-.04 8.05-3.69 8.01-8.15a8.123 8.123 0 0 0-.81-3.45l-52-104a8.067 8.067 0 0 0-14.4 0z"
+          fill="#f2a600">
+        </path>
+
+        <path
+          d="M53.56 15.72l-48.8 97.4c-1.83 3.77-.25 8.31 3.52 10.14c.99.48 2.08.74 3.18.76h97.5a7.55 7.55 0 0 0 7.48-7.62a7.605 7.605 0 0 0-.78-3.28l-48.7-97.4a7.443 7.443 0 0 0-9.93-3.47a7.484 7.484 0 0 0-3.47 3.47z"
+          fill="#ffcc32">
+        </path>
+
+        <g opacity=".2" fill="#424242">
+          <path
+            d="M64.36 34.02c4.6 0 8.3 3.7 8 8l-3.4 48c-.38 2.54-2.74 4.3-5.28 3.92a4.646 4.646 0 0 1-3.92-3.92l-3.4-48c-.3-4.3 3.4-8 8-8">
+          </path>
+
+          <path d="M64.36 98.02c3.31 0 6 2.69 6 6s-2.69 6-6 6s-6-2.69-6-6s2.69-6 6-6">
+          </path>
+        </g>
+
+        <lineargradient id="IconifyId17ecdb2904d178eab21432" gradientunits="userSpaceOnUse" x1="68" y1="-1808.36"
+          x2="68" y2="-1887.05" gradienttransform="matrix(1 0 0 -1 -3.64 -1776.09)">
+
+          <stop offset="0" stop-color="#424242">
+          </stop>
+
+          <stop offset="1" stop-color="#212121">
+          </stop>
+        </lineargradient>
+
+        <path
+          d="M64.36 34.02c4.6 0 8.3 3.7 8 8l-3.4 48c-.38 2.54-2.74 4.3-5.28 3.92a4.646 4.646 0 0 1-3.92-3.92l-3.4-48c-.3-4.3 3.4-8 8-8z"
+          fill="url(#IconifyId17ecdb2904d178eab21432)">
+        </path>
+
+        <lineargradient id="IconifyId17ecdb2904d178eab21433" gradientunits="userSpaceOnUse" x1="64.36" y1="-1808.36"
+          x2="64.36" y2="-1887.05" gradienttransform="matrix(1 0 0 -1 0 -1772.11)">
+
+          <stop offset="0" stop-color="#424242">
+          </stop>
+
+          <stop offset="1" stop-color="#212121">
+          </stop>
+        </lineargradient>
+
+        <circle cx="64.36" cy="104.02" r="6" fill="url(#IconifyId17ecdb2904d178eab21433)">
+        </circle>
+
+        <path
+          d="M53.56 23.02c-1.2 1.5-21.4 41-21.4 41s-1.8 3 .7 4.7c2.3 1.6 4.4-.3 5.3-1.8s19.2-36.9 19.9-38.6c.6-1.87.18-3.91-1.1-5.4c-1.3-1.2-2.6-1-3.4.1z"
+          fill="#fff170">
+        </path>
+
+        <circle cx="31.36" cy="75.33" r="3.3" fill="#fff170">
+        </circle>
+      </svg>
+
+      <span class="client-table__text client-table__text_error">
+        Что-то пошло не так -
+      </span>
+    </td>
+  </tr>
+</template>
+
+<template class="table-template table-template_data">
+  <tr class="client-table__row client-table__row_observer">
+    <td class="client-table__col client-table__col_id flex">
+      123455
+    </td>
+
+    <td class="client-table__col client-table__col_full-name flex">
+      Скворцов Денис Юрьевич
+    </td>
+
+    <td class="client-table__col client-table__col_date-creation flex">
+      <time datetime="2021-02-21T12:41" class="client-table__time flex">
+        <span class="client-table__text client-table__text_date">
+          21.02.2021
+        </span>
+
+        <span class="client-table__text client-table__text_time">
+          12:41
+        </span>
+      </time>
+    </td>
+
+    <td class="client-table__col client-table__col_date-change flex">
+      <time datetime="2021-02-21T14:50" class="client-table__time flex">
+        <span class="client-table__text client-table__text_date">
+          21.02.2021
+        </span>
+
+        <span class="client-table__text client-table__text_time">
+          14:50
+        </span>
+      </time>
+    </td>
+
+    <td class="client-table__col client-table__col_contacts flex">
+      <ul class="client-table__list client-table__list_contacts flex">
+      </ul>
+    </td>
+
+    <td class="client-table__col client-table__col_actions flex">
+      <ul class="client-table__list client-table__list_actions flex">
+        <li class="client-table__item">
+          <button class="client-table__button client-table__button_edit flex button-reset">
+            <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.7" clip-path="url(#clip0_216_219)">
+                <path
+                  d="M2 11.5002V14.0002H4.5L11.8733 6.62687L9.37333 4.12687L2 11.5002ZM13.8067 4.69354C14.0667 4.43354 14.0667 4.01354 13.8067 3.75354L12.2467 2.19354C11.9867 1.93354 11.5667 1.93354 11.3067 2.19354L10.0867 3.41354L12.5867 5.91354L13.8067 4.69354Z"
+                  fill="#9873FF" />
+              </g>
+              <defs>
+                <clippath>
+                  <rect width="16" height="16" fill="white" />
+                </clippath>
+              </defs>
+            </svg>
+            Изменить
+          </button>
+        </li>
+
+        <li class="client-table__item">
+          <button class="client-table__button client-table__button_remove flex button-reset">
+            <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.7" clip-path="url(#clip0_216_224)">
+                <path
+                  d="M8 2C4.682 2 2 4.682 2 8C2 11.318 4.682 14 8 14C11.318 14 14 11.318 14 8C14 4.682 11.318 2 8 2ZM8 12.8C5.354 12.8 3.2 10.646 3.2 8C3.2 5.354 5.354 3.2 8 3.2C10.646 3.2 12.8 5.354 12.8 8C12.8 10.646 10.646 12.8 8 12.8ZM10.154 5L8 7.154L5.846 5L5 5.846L7.154 8L5 10.154L5.846 11L8 8.846L10.154 11L11 10.154L8.846 8L11 5.846L10.154 5Z"
+                  fill="#F06A4D" />
+              </g>
+              <defs>
+                <clippath>
+                  <rect width="16" height="16" fill="white" />
+                </clippath>
+              </defs>
+            </svg>
+            Удалить
+          </button>
+        </li>
+      </ul>
+    </td>
+  </tr>
+</template>
+
+<template class="contact-template">
+  <li class="client-table__item">
+    <button class="client-table__button client-table__button_contact flex button-reset">
+      <div class="client-table__tooltip flex">
+        <span class="client-table__text client-table__text_key">
+        </span>
+
+        <span class="client-table__text client-table__text_value">
+        </span>
+      </div>
+    </button>
+  </li>
+</template>
+
+<template class="icon-template icon-template_vk">
+  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.7">
+      <path
+        d="M8 0C3.58187 0 0 3.58171 0 8C0 12.4183 3.58187 16 8 16C12.4181 16 16 12.4183 16 8C16 3.58171 12.4181 0 8 0ZM12.058 8.86523C12.4309 9.22942 12.8254 9.57217 13.1601 9.97402C13.3084 10.1518 13.4482 10.3356 13.5546 10.5423C13.7065 10.8371 13.5693 11.1604 13.3055 11.1779L11.6665 11.1776C11.2432 11.2126 10.9064 11.0419 10.6224 10.7525C10.3957 10.5219 10.1853 10.2755 9.96698 10.037C9.87777 9.93915 9.78382 9.847 9.67186 9.77449C9.44843 9.62914 9.2543 9.67366 9.1263 9.90707C8.99585 10.1446 8.96606 10.4078 8.95362 10.6721C8.93577 11.0586 8.81923 11.1596 8.43147 11.1777C7.60291 11.2165 6.81674 11.0908 6.08606 10.6731C5.44147 10.3047 4.94257 9.78463 4.50783 9.19587C3.66126 8.04812 3.01291 6.78842 2.43036 5.49254C2.29925 5.2007 2.39517 5.04454 2.71714 5.03849C3.25205 5.02817 3.78697 5.02948 4.32188 5.03799C4.53958 5.04143 4.68362 5.166 4.76726 5.37142C5.05633 6.08262 5.4107 6.75928 5.85477 7.38684C5.97311 7.55396 6.09391 7.72059 6.26594 7.83861C6.45582 7.9689 6.60051 7.92585 6.69005 7.71388C6.74734 7.57917 6.77205 7.43513 6.78449 7.29076C6.82705 6.79628 6.83212 6.30195 6.75847 5.80943C6.71263 5.50122 6.53929 5.30218 6.23206 5.24391C6.07558 5.21428 6.0985 5.15634 6.17461 5.06697C6.3067 4.91245 6.43045 4.81686 6.67777 4.81686L8.52951 4.81653C8.82136 4.87382 8.88683 5.00477 8.92645 5.29874L8.92808 7.35656C8.92464 7.47032 8.98521 7.80751 9.18948 7.88198C9.35317 7.936 9.4612 7.80473 9.55908 7.70112C10.0032 7.22987 10.3195 6.67368 10.6029 6.09801C10.7279 5.84413 10.8358 5.58142 10.9406 5.31822C11.0185 5.1236 11.1396 5.02785 11.3593 5.03112L13.1424 5.03325C13.195 5.03325 13.2483 5.03374 13.3004 5.04274C13.6009 5.09414 13.6832 5.22345 13.5903 5.5166C13.4439 5.97721 13.1596 6.36088 12.8817 6.74553C12.5838 7.15736 12.2661 7.55478 11.9711 7.96841C11.7001 8.34652 11.7215 8.53688 12.058 8.86523Z"
+        fill="#9873FF" />
+    </g>
+  </svg>
+</template>
+
+<template class="icon-template icon-template_fb">
+  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.7">
+      <path
+        d="M7.99999 0C3.6 0 0 3.60643 0 8.04819C0 12.0643 2.928 15.3976 6.75199 16V10.3775H4.71999V8.04819H6.75199V6.27309C6.75199 4.25703 7.94399 3.14859 9.77599 3.14859C10.648 3.14859 11.56 3.30121 11.56 3.30121V5.28514H10.552C9.55999 5.28514 9.24799 5.90362 9.24799 6.53815V8.04819H11.472L11.112 10.3775H9.24799V16C11.1331 15.7011 12.8497 14.7354 14.0879 13.2772C15.3261 11.819 16.0043 9.96437 16 8.04819C16 3.60643 12.4 0 7.99999 0Z"
+        fill="#9873FF" />
+    </g>
+  </svg>
+</template>
+
+<template class="icon-template icon-template_mail">
+  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path opacity="0.7" fill-rule="evenodd" clip-rule="evenodd"
+      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM4 5.75C4 5.3375 4.36 5 4.8 5H11.2C11.64 5 12 5.3375 12 5.75V10.25C12 10.6625 11.64 11 11.2 11H4.8C4.36 11 4 10.6625 4 10.25V5.75ZM8.424 8.1275L11.04 6.59375C11.14 6.53375 11.2 6.4325 11.2 6.32375C11.2 6.0725 10.908 5.9225 10.68 6.05375L8 7.625L5.32 6.05375C5.092 5.9225 4.8 6.0725 4.8 6.32375C4.8 6.4325 4.86 6.53375 4.96 6.59375L7.576 8.1275C7.836 8.28125 8.164 8.28125 8.424 8.1275Z"
+      fill="#9873FF" />
+  </svg>
+</template>
+
+<template class="icon-template icon-template_phone">
+  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.7">
+      <circle cx="8" cy="8" r="8" fill="#9873FF" />
+      <path
+        d="M11.56 9.50222C11.0133 9.50222 10.4844 9.41333 9.99111 9.25333C9.83556 9.2 9.66222 9.24 9.54222 9.36L8.84444 10.2356C7.58667 9.63556 6.40889 8.50222 5.78222 7.2L6.64889 6.46222C6.76889 6.33778 6.80444 6.16444 6.75556 6.00889C6.59111 5.51556 6.50667 4.98667 6.50667 4.44C6.50667 4.2 6.30667 4 6.06667 4H4.52889C4.28889 4 4 4.10667 4 4.44C4 8.56889 7.43556 12 11.56 12C11.8756 12 12 11.72 12 11.4756V9.94222C12 9.70222 11.8 9.50222 11.56 9.50222Z"
+        fill="white" />
+    </g>
+  </svg>
+</template>
+
+<template class="icon-template icon-template_abstract_contact">
+  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path opacity="0.7" fill-rule="evenodd" clip-rule="evenodd"
+      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM3 8C3 5.24 5.24 3 8 3C10.76 3 13 5.24 13 8C13 10.76 10.76 13 8 13C5.24 13 3 10.76 3 8ZM9.5 6C9.5 5.17 8.83 4.5 8 4.5C7.17 4.5 6.5 5.17 6.5 6C6.5 6.83 7.17 7.5 8 7.5C8.83 7.5 9.5 6.83 9.5 6ZM5 9.99C5.645 10.96 6.75 11.6 8 11.6C9.25 11.6 10.355 10.96 11 9.99C10.985 8.995 8.995 8.45 8 8.45C7 8.45 5.015 8.995 5 9.99Z"
+      fill="#9873FF" />
+  </svg>
+</template>
+
+<template class="icon-template icon-template_preview">
+  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="8" cy="8" r="7.5" stroke="#9873FF" />
+    <path
+      d="M4.92969 8.52734H3.375V7.83203H4.92969V6.23828H5.63281V7.83203H7.19141V8.52734H5.63281V10.1133H4.92969V8.52734ZM7.9375 8.56641C7.9375 6.33203 8.84766 5.21484 10.668 5.21484C10.9544 5.21484 11.1966 5.23698 11.3945 5.28125V6.04688C11.1966 5.98958 10.9674 5.96094 10.707 5.96094C10.0951 5.96094 9.63542 6.125 9.32812 6.45312C9.02083 6.78125 8.85417 7.30729 8.82812 8.03125H8.875C8.9974 7.82031 9.16927 7.65755 9.39062 7.54297C9.61198 7.42578 9.8724 7.36719 10.1719 7.36719C10.6901 7.36719 11.0938 7.52604 11.3828 7.84375C11.6719 8.16146 11.8164 8.59245 11.8164 9.13672C11.8164 9.73568 11.6484 10.2096 11.3125 10.5586C10.9792 10.9049 10.5234 11.0781 9.94531 11.0781C9.53646 11.0781 9.18099 10.9805 8.87891 10.7852C8.57682 10.5872 8.34375 10.3008 8.17969 9.92578C8.01823 9.54818 7.9375 9.09505 7.9375 8.56641ZM9.92969 10.3203C10.2448 10.3203 10.487 10.2188 10.6562 10.0156C10.8281 9.8125 10.9141 9.52214 10.9141 9.14453C10.9141 8.81641 10.8333 8.55859 10.6719 8.37109C10.513 8.18359 10.2734 8.08984 9.95312 8.08984C9.75521 8.08984 9.57292 8.13281 9.40625 8.21875C9.23958 8.30208 9.10807 8.41797 9.01172 8.56641C8.91536 8.71224 8.86719 8.86198 8.86719 9.01562C8.86719 9.38281 8.96615 9.69271 9.16406 9.94531C9.36458 10.1953 9.61979 10.3203 9.92969 10.3203Z"
+      fill="#333333" />
+  </svg>
+</template>
+
+<template class="installer-template installer-template_contact">
+  <li class="modal__item">
+    <div class="modal__installer modal__installer_contact grid">
+      <div class="modal__select custom-select">
+        <button type="button" class="custom-select__button custom-select__flag-close button-reset">
+          Телефон
+        </button>
+
+        <div class="modal__wrapper modal__wrapper_select hidden">
+          <ul class="custom-select__list flex">
+            <li class="custom-select__item">
+              <label class="custom-select__label">
+                <input type="radio" name="contact" class="custom-select__input">
+                <span class="custom-select__text">
+                  Доп. телефон
+                </span>
+              </label>
+            </li>
+
+            <li class="custom-select__item">
+              <label class="custom-select__label">
+                <input type="radio" name="contact" class="custom-select__input">
+                <span class="custom-select__text">
+                  Email
+                </span>
+              </label>
+            </li>
+
+            <li class="custom-select__item">
+              <label class="custom-select__label">
+                <input type="radio" name="contact" class="custom-select__input">
+                <span class="custom-select__text">
+                  Vk
+                </span>
+              </label>
+            </li>
+
+            <li class="custom-select__item">
+              <label class="custom-select__label">
+                <input type="radio" name="contact" class="custom-select__input">
+                <span class="custom-select__text">
+                  Facebook
+                </span>
+              </label>
+            </li>
+
+            <li class="custom-select__item">
+              <label class="custom-select__label">
+                <input type="radio" name="contact" class="custom-select__input">
+                <span class="custom-select__text">
+                  Другое
+                </span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <label class="modal__label modal__label_contact">
+        <input type="tel" name="" autocomplete="new-password" required class="modal__input modal__input_contact">
+      </label>
+
+      <button type="button" class="modal__button modal__button_remove flex hidden-total button-reset">
+        <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6 0C2.682 0 0 2.682 0 6C0 9.318 2.682 12 6 12C9.318 12 12 9.318 12 6C12 2.682 9.318 0 6 0ZM6 10.8C3.354 10.8 1.2 8.646 1.2 6C1.2 3.354 3.354 1.2 6 1.2C8.646 1.2 10.8 3.354 10.8 6C10.8 8.646 8.646 10.8 6 10.8ZM8.154 3L6 5.154L3.846 3L3 3.846L5.154 6L3 8.154L3.846 9L6 6.846L8.154 9L9 8.154L6.846 6L9 3.846L8.154 3Z"
+            fill="#B0B0B0" />
+        </svg>
+      </button>
+    </div>
+  </li>
+</template>

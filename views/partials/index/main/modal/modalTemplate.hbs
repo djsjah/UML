@@ -1,0 +1,17 @@
+<div class="modal {{modalClass}} hidden-total">
+  {{#with (setProps modalType) as |props|}}
+    {{#> index/main/modal/modalHead}}
+      {{ props }}
+    {{/index/main/modal/modalHead}}
+
+    {{#if props.security}}
+      {{#> index/main/modal/modalBodySecurity}}
+        {{ props }}
+      {{/index/main/modal/modalBodySecurity}}
+    {{else}}
+      {{#> index/main/modal/modalBody}}
+        {{ props }}
+      {{/index/main/modal/modalBody}}
+    {{/if}}
+  {{/with}}
+</div>

@@ -1,0 +1,44 @@
+{{#with this as |props|}}
+  {{#if (or props.authorizer props.registrar)}}
+    {{setVar 'modalHeadClass' "modal__head modal__head_border flex"}}
+  {{else}}
+    {{setVar 'modalHeadClass' "modal__head flex"}}
+  {{/if}}
+
+  <div class='{{ @root.modalHeadClass }}'>
+    {{#if props.builder}}
+      {{setVar 'title' "Новый клиент"}}
+    {{else if props.destructor}}
+      {{setVar 'title' "Удалить клиента"}}
+    {{else if props.mutator}}
+      {{setVar 'title' "Изменить данные"}}
+      {{setVar 'data' "ID: 123458"}}
+    {{else if props.authorizer}}
+      {{setVar 'title' 'Авторизация'}}
+    {{else if props.registrar}}
+      {{setVar 'title' 'Регистрация'}}
+    {{else if props.restorer}}
+      {{setVar 'title' "Сброс пароля"}}
+    {{else if props.installer}}
+      {{setVar 'title' "Ваш пароль сброшен"}}
+    {{/if}}
+
+    <h2 class="modal__title">
+      {{ @root.title }}
+    </h2>
+
+    {{#if props.mutator}}
+      <span class="modal__data">
+        {{ @root.data }}
+      </span>
+    {{/if}}
+
+    <button class="modal__button modal__button_cancel flex button-reset">
+      <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M22.2332 7.73333L21.2665 6.76666L14.4998 13.5334L7.73318 6.7667L6.76652 7.73336L13.5332 14.5L6.76654 21.2667L7.73321 22.2333L14.4998 15.4667L21.2665 22.2334L22.2332 21.2667L15.4665 14.5L22.2332 7.73333Z"
+        fill="#B0B0B0" />
+      </svg>
+    </button>
+  </div>
+{{/with}}

@@ -1,0 +1,43 @@
+{{#with this as |props|}}
+  <div class="modal__foot flex">
+    {{setVar 'cancelButton' 'Отмена'}}
+    {{setVar 'cancelButtonClass' "modal__button modal__button_cancel button-reset"}}
+
+    {{#if props.builder}}
+      {{setVar 'saveButton' 'Сохранить'}}
+    {{else if props.destructor}}
+      {{setVar 'saveButton' 'Удалить'}}
+    {{else if props.mutator}}
+      {{setVar 'saveButton' 'Сохранить'}}
+      {{setVar 'cancelButton' "Удалить клиента"}}
+      {{setVar 'cancelButtonClass' "modal__button modal__button_call_remove button-reset"}}
+    {{else if props.authorizer}}
+      {{setVar 'saveButton' 'Вход'}}
+    {{else if props.registrar}}
+      {{setVar 'saveButton' 'Сохранить'}}
+    {{else if props.restorer}}
+      {{setVar 'saveButton' 'Отправить'}}
+    {{else if props.installer}}
+      {{setVar 'saveButton' 'Сохранить'}}
+    {{/if}}
+
+    <p class="modal__error hidden-total">
+    </p>
+
+    <ul class="modal__list modal__list_foot flex">
+      <li class="modal__item">
+        <button type="submit" class="modal__button modal__button_save flex button-reset">
+          <span class="modal__text">
+            {{ @root.saveButton }}
+          </span>
+        </button>
+      </li>
+
+      <li class="modal__item">
+        <button type="button" class='{{ @root.cancelButtonClass }}'>
+          {{ @root.cancelButton }}
+        </button>
+      </li>
+    </ul>
+  </div>
+{{/with}}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  {{> general/metaDefault }}
+  <title>CRM-система</title>
+  <script src="/syncScript/startPageLoad.js"></script>
+  {{> general/styleNormalizer }}
+  {{> general/initialStyleInstaller }}
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/anim/anim.css">
+  <link rel="stylesheet" href="/media/media.css">
+  <script>
+    window.API_URL = '{{ APP_URL }}' + '/api';
+  </script>
+  <script type="module" src="/main.js"></script>
+</head>
+
+<body>
+  {{> index/header/header }}
+  {{> index/main/main }}
+  {{> index/footer/footer }}
+</body>
+
+</html>

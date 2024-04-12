@@ -1,0 +1,81 @@
+{{#with this as |props|}}
+  <form class="modal__body modal__body_form flex">
+    {{#if props.restorer}}
+      <input type="email" placeholder="Введите вашу почту"
+             class="modal__input modal__input_security modal__input_email" required>
+    {{else}}
+      <ul class="modal__list modal__list_security flex">
+        {{#if props.authorizer}}
+          <li class="modal__item">
+            <input type="text" placeholder="Имя пользователя"
+                   class="modal__input modal__input_security modal__input_user" required>
+          </li>
+
+          <li class="modal__item">
+            <input type="password" placeholder="Пароль"
+                   class="modal__input modal__input_security modal__input_password" required>
+
+            <button type="button" class="modal__button modal__button_restore flex button-reset">
+              Забыли пароль?
+            </button>
+          </li>
+        {{else if props.registrar}}
+          <li class="modal__item">
+            <input type="email" placeholder="Введите вашу почту"
+                   class="modal__input modal__input_security modal__input_email" required>
+          </li>
+
+          <li class="modal__item">
+            <input type="text" placeholder="Придумайте имя пользователя"
+                   class="modal__input modal__input_security modal__input_user" required>
+          </li>
+
+          <li class="modal__item">
+            <input type="password" placeholder="Придумайте пароль"
+                   class="modal__input modal__input_security modal__input_password" required>
+          </li>
+
+          <li class="modal__item">
+            <input type="password" placeholder="Подтвердите пароль"
+                   class="modal__input modal__input_security modal__input_password" required>
+          </li>
+        {{else if props.installer}}
+          <li class="modal__item">
+            <input type="email" placeholder="Введите новый пароль"
+                   class="modal__input modal__input_security modal__input_password" required>
+          </li>
+
+          <li class="modal__item">
+            <input type="email" placeholder="Подтвердите пароль"
+                   class="modal__input modal__input_security modal__input_password" required>
+          </li>
+        {{/if}}
+      </ul>
+
+      {{#if props.authorizer}}
+        <div class="modal__wrapper modal__wrapper_authorizer flex">
+          <label class="modal__label modal__label_checkbox">
+            <input type="checkbox" class="modal__checkbox modal__checkbox_authorizer">
+            <span class="modal__text modal__text_authorizer">
+              Запомнить
+            </span>
+          </label>
+
+          <button type="button" class="modal__button modal__button_call_registrar flex button-reset">
+            <span class="modal__text modal__text_has_login">
+              Нет учетной записи?
+            </span>
+
+            <span class="modal__text modal__text_call_registrar">
+              Регистрация
+            </span>
+          </button>
+        </div>
+      {{/if}}
+    {{/if}}
+
+    {{#> index/main/modal/modalFoot}}
+      {{ props }}
+    {{/index/main/modal/modalFoot}}
+  </form>
+{{/with}}

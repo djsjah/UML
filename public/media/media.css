@@ -1,0 +1,153 @@
+@media (max-width: 866px) {
+
+  /* main */
+
+  /* crm-panel */
+
+  .client-table__main-col_full-name,
+  .client-table__col_full-name {
+    padding-left: 4px;
+  }
+
+  .client-table__main-col_date-creation,
+  .client-table__col_date-creation {
+    padding-left: 18px;
+  }
+
+  .client-table__main-col_date-change,
+  .client-table__col_date-change {
+    padding-left: 13px;
+  }
+
+  .client-table__main-col_contacts,
+  .client-table__col_contacts {
+    padding-left: 13px;
+  }
+
+  .client-table__main-col_actions,
+  .client-table__col_actions {
+    padding-left: 10px;
+  }
+
+  .client-table__time {
+    gap: 0;
+  }
+
+  .client-table__list_actions {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  /* general */
+
+  .container {
+    padding: 0 10px;
+  }
+
+
+  /* header */
+
+  .header-block {
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  .header-block__form {
+    display: none;
+  }
+
+
+  /* main */
+
+  /* crm-panel */
+
+  .client-table {
+    overflow: scroll;
+  }
+
+  /* modal */
+
+  .modal {
+    width: 300px;
+  }
+
+  .modal_builder,
+  .modal_mutator
+  {
+    padding-top: 3px;
+  }
+
+  .modal_destructor {
+    padding: 3px 3px 27px;
+  }
+
+  .modal__head {
+    padding-left: 15px;
+    padding-right: 3px;
+  }
+
+  .modal_authorizer .modal__head {
+    margin-bottom: 24px;
+  }
+
+  .modal_authorizer .modal__title {
+    font-size: 15px;
+  }
+
+  .modal_destructor .modal__body {
+    padding: 0 20px;
+  }
+
+  .modal__list_name {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .modal__label_contact::after {
+    content: "Введите данные";
+    left: 6px;
+  }
+
+  .modal__input_contact {
+    padding: 8px 6px 8px;
+  }
+
+  .modal__input_authorizer {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .modal__wrapper_exposed {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .modal__installer_contact {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .modal__installer_exposed {
+    grid-template-columns: 110px 1fr 27px;
+  }
+
+  .custom-select__button {
+    padding-right: 47px;
+    background-position-x: 90px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  /* header */
+
+  .user__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .user__button {
+    font-size: 13px;
+  }
+}

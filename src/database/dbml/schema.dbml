@@ -1,0 +1,67 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table User {
+  id Int [pk, increment]
+  name String [not null]
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  password String [not null]
+  contacts UserContact [not null]
+  clients ClientUser [not null]
+}
+
+Table Client {
+  id Int [pk]
+  name String [not null]
+  surname String [not null]
+  lastName String
+  createdAt DateTime [default: `now()`, not null]
+  updatedAt DateTime [not null]
+  contacts ClientContact [not null]
+  users ClientUser [not null]
+}
+
+Table UserContact {
+  id Int [pk, increment]
+  type String [not null]
+  value String [not null]
+  userId Int [not null]
+  user User [not null]
+
+  indexes {
+    (type, value) [unique]
+  }
+}
+
+Table ClientContact {
+  id Int [pk, increment]
+  type String [not null]
+  value String [not null]
+  clientId Int [not null]
+  client Client [not null]
+
+  indexes {
+    (type, value) [unique]
+  }
+}
+
+Table ClientUser {
+  userId Int [not null]
+  clientId Int [not null]
+  user User [not null]
+  client Client [not null]
+
+  indexes {
+    (userId, clientId) [pk]
+  }
+}
+
+Ref: UserContact.userId > User.id
+
+Ref: ClientContact.clientId > Client.id
+
+Ref: ClientUser.userId > User.id
+
+Ref: ClientUser.clientId > Client.id

@@ -1,0 +1,1 @@
+const startLoadDate = new Date();

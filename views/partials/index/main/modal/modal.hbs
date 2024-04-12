@@ -1,0 +1,8 @@
+<div class="disabled-block hidden-total">
+</div>
+
+<div class="decorator decorator_modal flex hidden-total">
+  {{#each modalArray }}
+    {{> index/main/modal/modalTemplate modalClass=this.className modalType=this.type }}
+  {{/each}}
+</div>

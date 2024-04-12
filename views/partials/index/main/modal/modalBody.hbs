@@ -1,0 +1,68 @@
+{{#with this as |props|}}
+  {{#if props.destructor}}
+    <div class="modal__body">
+      <p class="modal__descr">
+        Вы&nbsp;действительно хотите удалить данного клиента?
+      </p>
+    </div>
+
+    {{#> index/main/modal/modalFoot}}
+      {{ props }}
+    {{/index/main/modal/modalFoot}}
+  {{else}}
+    <form class="modal__body modal__body_form flex">
+      <ul class="modal__list modal__list_name flex">
+        <li class="modal__item">
+          <label class="modal__label modal__label_name">
+            <input type="text" name="surname" autocomplete="new-password" required
+                   class="modal__input modal__input_name">
+
+            <span class="modal__placeholder modal__placeholder_name">
+              Фамилия<span class="modal__flag modal__flag_required">*</span>
+            </span>
+          </label>
+        </li>
+
+        <li class="modal__item">
+          <label class="modal__label modal__label_name">
+            <input type="text" name="name" autocomplete="new-password" required
+                   class="modal__input modal__input_name">
+
+            <span class="modal__placeholder modal__placeholder_name">
+              Имя<span class="modal__flag modal__flag_required">*</span>
+            </span>
+          </label>
+        </li>
+
+        <li class="modal__item">
+          <label class="modal__label modal__label_name">
+            {{#if props.builder}}
+              <input type="text" name="lastName" autocomplete="new-password" placeholder="Отчество"
+                     class="modal__input modal__input_name">
+            {{else if props.mutator}}
+              <input type="text" name="lastName" autocomplete="new-password"
+                     class="modal__input modal__input_name">
+
+              <span class="modal__placeholder modal__placeholder_name">
+                Отчество
+              </span>
+            {{/if}}
+          </label>
+        </li>
+      </ul>
+
+      <div class="modal__wrapper modal__wrapper_contact flex">
+        <ul class="modal__list modal__list_contact hidden-total flex">
+        </ul>
+
+        <button type="button" class="modal__button modal__button_contact button-reset">
+          Добавить контакт
+        </button>
+      </div>
+
+      {{#> index/main/modal/modalFoot}}
+        {{ props }}
+      {{/index/main/modal/modalFoot}}
+    </form>
+  {{/if}}
+{{/with}}

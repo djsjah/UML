@@ -1,0 +1,62 @@
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator client {
+ provider = "prisma-client-js"
+}
+
+datasource db {
+ provider = "postgresql"
+ url      = env("DATABASE_URL")
+}
+
+model User {
+ id          Int      @id @default(autoincrement())
+ name        String
+ createdAt   DateTime @default(now())
+ updatedAt   DateTime @updatedAt
+ password    String
+ contacts    UserContact[]
+ clients     ClientUser[]
+}
+
+model Client {
+ id          Int      @id
+ name        String
+ surname     String
+ lastName    String?
+ createdAt   DateTime @default(now())
+ updatedAt   DateTime @updatedAt
+ contacts    ClientContact[]
+ users       ClientUser[]
+}
+
+model UserContact {
+ id          Int      @id @default(autoincrement())
+ type        String
+ value       String
+ userId      Int
+ user        User   @relation(fields: [userId], references: [id])
+
+ @@unique([type, value])
+}
+
+model ClientContact {
+ id          Int      @id @default(autoincrement())
+ type        String
+ value       String
+ clientId    Int
+ client      Client   @relation(fields: [clientId], references: [id])
+
+ @@unique([type, value])
+}
+
+model ClientUser {
+ userId      Int
+ clientId    Int
+ user        User     @relation(fields: [userId], references: [id])
+ client      Client   @relation(fields: [clientId], references: [id])
+
+ @@id([userId, clientId])
+}
